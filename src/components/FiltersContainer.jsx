@@ -1,6 +1,5 @@
 import '../../src/App.css';
 
-
 const Filters = ({ countries, categories, handleCountryChange, handleCategoryChange, selectedCountry, selectedCategory }) => {
   
   return (

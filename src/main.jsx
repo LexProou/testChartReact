@@ -5,10 +5,14 @@ import App from './App.jsx'
 import { Provider } from 'react-redux';
 import store from './store/store.js';
 
+import  ErrorBoundary  from './error/ErrorBoundary.jsx';
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
-    <App />
+      <ErrorBoundary>
+           <App />
+      </ErrorBoundary>
     </Provider>
   </StrictMode>,
 )

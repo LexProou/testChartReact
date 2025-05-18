@@ -59,6 +59,47 @@ h1 {
   font-size: 2rem;
 }
 
+/* ErrorBoundary */
+.error-boundary {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ff0000;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.error-boundary h1 {
+  color: #fff;
+  margin-left: 1rem;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.error-boundary p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.error-boundary button {
+  margin-left: 2rem;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error-boundary button:hover {
+  background-color: #0056b3;
+}
+
 @media (max-width: 1024px) {
   canvas {
     width: 50rem;

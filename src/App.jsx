@@ -70,6 +70,8 @@ function App() {
     }
   };
 
+
+
 const handleCategoryChange = (event) => {
     event.stopPropagation();
   console.log('Category changed:', event.target.value);
@@ -82,8 +84,18 @@ const handleCategoryChange = (event) => {
   }
 };
 
+  // Проверка ErrorBoundary
+  // const [errors, setError] = useState(null);
+  // const handleClick = () => {
+  //   setError(new Error('Test error'));
+  // };
+
   return (
     <div className="app-container">
+      {/* Проверка ErrorBoundary 
+            <button onClick={handleClick}>Trigger error</button>
+            {errors && <ErrorBoundary errors={errors} />} */}
+      
       <h1>Top History</h1>
 
       {error && <p className="error">{error}</p>}
@@ -117,6 +129,7 @@ const handleCategoryChange = (event) => {
             <ChartComponent chartData={chartData} chartRef={chartRef} />
             <ExportButtons chartData={chartData} chartRef={chartRef} />
           </div>
+          
         </>
       )}
     </div>

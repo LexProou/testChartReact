@@ -1,0 +1,167 @@
+.app-container {
+  margin-bottom: 5rem;
+  margin-left: 2rem;
+}
+
+.chart-container {
+  width: 100%;
+  height: 400px;
+}
+
+canvas {
+  width: 50rem;
+  height: 40rem;
+  margin-left: 15rem;
+}
+
+select {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #aaa;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.filters-container {
+  display: flex;
+  flex-direction: row;
+}
+.filters-container2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.category-selector {
+  margin-left: 1rem;
+}
+
+.date-range-selector {
+  margin-top: 1.3rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.date-picker {
+  margin-right: 1rem;
+}
+
+h1 {
+   text-align: center;
+  font-size: 2rem;
+}
+
+@media (max-width: 1024px) {
+  canvas {
+    width: 50rem;
+    height: 40rem;
+    margin-left: 1rem;
+  }
+    .filters-container {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10rem;
+  }
+  .filters-container2 {
+  display: flex;
+  flex-direction: column;
+}
+   .country-selector {
+    margin-right: 14rem;
+  }
+
+  .category-selector {
+    margin-left: 0rem;
+}
+
+.date-range-selector {
+  display: flex;
+  flex-direction:column;
+  margin-right: 15rem;
+}
+  
+}
+
+@media (max-width: 768px) {
+  canvas {
+    width: 50rem;
+    height: 40rem;
+    margin-left: 1rem;
+  }
+  .country-selector {
+    margin-right: 14rem;
+  }
+
+  .category-selector {
+    margin-left: 0rem;
+}
+
+.date-range-selector {
+  display: flex;
+  flex-direction:column;
+  margin-right: 15rem;
+}
+  
+}
+
+@media (max-width: 375px) {
+
+ h1 {
+  text-align: center;
+  margin-right: 17rem;
+}
+
+  .filters-container {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10rem;
+  }
+
+  .country-selector,
+  .category-selector,
+  .date-range-selector {
+    min-width: 100%;
+  }
+
+  .country-selector {
+    margin-right: 25rem;
+  }
+
+  .category-selector {
+    margin-left: 0rem;
+}
+
+  .export-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  canvas {
+  width: 50rem;
+  height: 40rem;
+  margin-left: 1rem;
+}
+
+.date-range-selector {
+  display: flex;
+  flex-direction:column;
+  margin-left: 26rem;
+}
+button {
+  height: 2rem;
+  width: 10rem;
+  margin-bottom: 1rem;
+}
+
+#country-select {
+  margin-left: 0.5rem;
+}
+}

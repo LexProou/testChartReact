@@ -12,6 +12,7 @@ import FiltersContainer from './components/FiltersContainer';
 import DateRangePicker from './components/DateRangePicker';
 import ChartComponent from './components/ChartComponent';
 import ExportButtons from './components/ExportButtons';
+import CircularProgress from '@mui/material/CircularProgress';
 
 import {
   Chart as ChartJS,
@@ -47,11 +48,14 @@ function App() {
   const [endDate, setEndDate] = useState(new Date());
   const chartRef = useRef(null);
 
+
+
   useEffect(() => {
     dispatch(fetchCountries());
     dispatch(fetchCategories());
   }, [dispatch]);
 
+  
   useEffect(() => {
     return () => {
       if (chartRef.current) {
@@ -60,12 +64,13 @@ function App() {
     };
   }, [chartData]);
 
+
   const handleCountryChange = (event) => {
       event.stopPropagation();
     const countryCode = event.target.value;
    
-    setSelectedCountry(countryCode);
-    if (countryCode && selectedCategory) {
+    setSelectedCountry(countryCode); 
+    if (countryCode && selectedCategory) { 
       dispatch(fetchChartData({ countryCode, categoryId: selectedCategory }));
     }
   };
@@ -100,7 +105,8 @@ const handleCategoryChange = (event) => {
 
       {error && <p className="error">{error}</p>}
       {isLoading ? (
-        <p>Loading data...</p>
+        <CircularProgress color="inherit" size="5rem" />
+      
       ) : (
         <>
          <div className="filters-container">
